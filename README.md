@@ -2,7 +2,7 @@
 
 A dual H-bridge motor driver board designed in Altium Designer, fabricated and functionally tested by the designer.
 
-**Status:** Native hardware source and manufacturing exports published. Physical fabrication and functional testing are designer-confirmed.
+**Status:** Original hardware revision (v1.0.0); native hardware source and manufacturing archives published. Physical fabrication and functional testing are designer-confirmed.
 
 ![L298N motor driver board — Altium 3D preview](Images/03-pcb-3d.png)
 
@@ -39,12 +39,12 @@ The schematic and PCB files are byte-for-byte copies of the original sources. Th
 
 ## Manufacturing
 
-- [Gerber files](Manufacturing/Gerber/)
-- [NC drill files](Manufacturing/NC-Drill/)
+- [Gerber ZIP](Manufacturing/Gerber.zip)
+- [NC Drill ZIP](Manufacturing/NC%20Drill.zip)
 - [Fabrication ZIP](Manufacturing/L298N-Fabrication.zip)
 - [Manufacturing notes](Manufacturing/README.md)
 
-The manufacturing outputs were generated on 27 November 2026. Their drill report lists 55 plated holes. Review the files in a fabrication viewer and confirm the board outline, drill format and manufacturer DFM requirements before ordering.
+The manufacturing archives were supplied by the designer for v1.0.0. Their equivalence to the earlier exports and PCB has not been independently established. Their drill report lists 55 plated holes. Review the files in a fabrication viewer and confirm the board outline, drill format and manufacturer DFM requirements before ordering.
 
 ## Verification
 

@@ -1,6 +1,9 @@
 # Changelog
 
-## Unreleased
+## v1.0.0 — Original hardware
+
+- Replaced expanded manufacturing directories with designer-supplied Gerber and NC Drill ZIP archives; refreshed the combined archive and download links.
+- Hardware source unchanged; archive-to-PCB equivalence remains unverified.
 
 - Added schematic, 2D layout and 3D previews captured from Altium.
 - Recorded an open visual-review observation on SENSE A/B connections; current-revision verification remains pending.
