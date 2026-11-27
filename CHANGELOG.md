@@ -2,6 +2,9 @@
 
 ## Unreleased
 
+- Added schematic, 2D layout and 3D previews captured from Altium.
+- Recorded an open visual-review observation on SENSE A/B connections; current-revision verification remains pending.
+
 - Published original native Altium schematic and PCB layout; verified source blob hashes.
 - Added a portable project configuration and output job with relative paths.
 - Added original Gerber and NC drill exports, manufacturing reports and fabrication ZIP.

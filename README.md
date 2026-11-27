@@ -4,6 +4,14 @@ A dual H-bridge motor driver board designed in Altium Designer, fabricated and f
 
 **Status:** Native hardware source and manufacturing exports published. Physical fabrication and functional testing are designer-confirmed.
 
+![L298N motor driver board — Altium 3D preview](Images/03-pcb-3d.png)
+
+## Design Previews
+
+[ Schematic ](Images/01-schematic.png) · [ 2D PCB layout ](Images/02-pcb-2d.png) · [ 3D PCB preview ](Images/03-pcb-3d.png)
+
+Previews were captured from the original Altium design; they are not photographs of the fabricated hardware.
+
 ## Hardware Overview
 
 | Item | Design information |
@@ -43,12 +51,14 @@ The manufacturing outputs were generated on 27 November 2026. Their drill report
 - PCB fabricated and functionally tested, as reported by the designer.
 - Native schematic and PCB source identity checked using Git blob hashes.
 - [Historical DRC report](Documentation/Historical-DRC.txt) reports zero violations and zero waived violations. Its date field is 1/3/2026, predating the current PCB file. A fresh DRC and a complete schematic/ERC review of the current revision are not included.
+- Visual schematic review: L298N SENSE A (pin 1) and SENSE B (pin 15) appear unconnected. Confirm their connection to ground or the appropriate current-sense return in both the physical board and the PCB before further fabrication. This observation is not a completed ERC or a determination of the tested hardware's wiring.
 - Detailed test results, procurement BOM and independent electrical ratings are not included.
 
 ## Repository Structure
 
 - Hardware/ — project configuration, schematic, PCB and output job
 - Manufacturing/ — Gerber, NC drill and fabrication archive
+- Images/ — schematic and 2D/3D design previews
 - Documentation/ — review records
 - README.md, CHANGELOG.md, LICENSE
 
