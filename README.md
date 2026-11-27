@@ -1,64 +1,61 @@
 # L298N Motor Driver Board
 
-A motor driver board based on the L298N, designed in Altium Designer, fabricated, and functionally tested by the designer.
+A dual H-bridge motor driver board designed in Altium Designer, fabricated and functionally tested by the designer.
 
-**Project status:** Fabricated and functionally tested (designer-confirmed). The native schematic is published; remaining technical documentation is being prepared.
+**Status:** Native hardware source and manufacturing exports published. Physical fabrication and functional testing are designer-confirmed.
 
-## Project Overview
+## Hardware Overview
 
-This project demonstrates the design and implementation of an L298N-based dual H-bridge motor driver board. The portfolio documents the electronic design, PCB development, fabrication, and functional verification of the hardware.
-
-## Engineering Scope
-
-- L298N-based motor control hardware
-- Schematic capture and PCB layout in Altium Designer
-- Physical PCB fabrication and functional testing
-- Technical documentation and manufacturing file organization
-
-## Design and Verification Status
-
-| Milestone | Status |
+| Item | Design information |
 | --- | --- |
-| Schematic design | Completed; [native source uploaded](Hardware/Schematic/Sheet1.L298N.SchDoc) |
-| PCB layout | Completed; source file pending upload |
-| PCB fabrication | Completed, as reported by the designer |
-| Functional testing | Successful, as reported by the designer |
-| Technical documentation | In preparation |
-| Manufacturing files | Pending review and publication |
+| Motor driver | L298N |
+| Logic supply regulator | L7805CV |
+| Protection diodes | 8 × 1N4007 |
+| Control signals | EN1, EN2, IN1–IN4 |
+| Motor outputs | OUT1–OUT4 |
+| Power nets | VCC, +5, GND |
+| PCB fabrication data | Top and bottom copper, solder masks, overlays, paste layers and board profile |
+| NC drill | 55 plated round holes across 5 tool sizes |
 
-Detailed electrical specifications, test conditions, component values, and fabrication dimensions will be documented after reviewing the original design files. No quantitative performance or safety ratings are claimed at this stage.
+The component inventory and net labels were extracted from the native schematic. The Gerber extension and drill reports support the manufacturing data above. Electrical operating limits and test conditions have not been independently established.
 
-## Schematic Source
+## Native Design Files
 
-[Sheet1.L298N.SchDoc](Hardware/Schematic/Sheet1.L298N.SchDoc) — original Altium Designer schematic, uploaded byte-for-byte without design modifications. See the [source inventory and review limitations](Hardware/Schematic/README.md).
+- [Altium project](Hardware/L298N.PrjPcb)
+- [Schematic](Hardware/Schematic/Sheet1.L298N.SchDoc)
+- [PCB layout](Hardware/PCB/PCB1.L298N.PcbDoc)
+- [Output job](Hardware/Job1.OutJob)
+- [Schematic inventory and review scope](Hardware/Schematic/README.md)
 
-## Planned Repository Structure
+The schematic and PCB files are byte-for-byte copies of the original sources. The published project and output-job configuration use relative paths; unavailable external library references and stale generated-document references were removed from the project copy. External component libraries are not included. The portable project has not been independently opened or compiled after the path adjustments.
 
-```text
-L298N-Motor-Driver-Board/
-├── Hardware/
-│   ├── Schematic/
-│   └── PCB/
-├── Images/
-├── Documentation/
-├── Manufacturing/
-├── README.md
-├── CHANGELOG.md
-└── LICENSE
-```
+## Manufacturing
 
-The schematic source is now available; the remaining directories describe the intended organization. Other design files and previews will be added after review.
+- [Gerber files](Manufacturing/Gerber/)
+- [NC drill files](Manufacturing/NC-Drill/)
+- [Fabrication ZIP](Manufacturing/L298N-Fabrication.zip)
+- [Manufacturing notes](Manufacturing/README.md)
 
-## Release Status
+The manufacturing outputs were generated on 27 November 2026. Their drill report lists 55 plated holes. Review the files in a fabrication viewer and confirm the board outline, drill format and manufacturer DFM requirements before ordering.
 
-Repository setup and initial documentation are complete. A versioned hardware release will be published after the source files and supporting documentation have been reviewed and uploaded.
+## Verification
 
-## Copyright and Usage
+- PCB fabricated and functionally tested, as reported by the designer.
+- Native schematic and PCB source identity checked using Git blob hashes.
+- [Historical DRC report](Documentation/Historical-DRC.txt) reports zero violations and zero waived violations. Its date field is 1/3/2026, predating the current PCB file. A fresh DRC and a complete schematic/ERC review of the current revision are not included.
+- Detailed test results, procurement BOM and independent electrical ratings are not included.
 
-**Copyright (c) 2026 jassim20. All rights reserved.**
+## Repository Structure
 
-Original project materials are shared for portfolio and reference purposes. No general permission to reproduce, modify, redistribute, manufacture from, or commercially exploit protected materials is granted. Applicable law, GitHub's Terms of Service, and third-party license obligations remain unaffected. See [LICENSE](LICENSE) for details.
+- Hardware/ — project configuration, schematic, PCB and output job
+- Manufacturing/ — Gerber, NC drill and fabrication archive
+- Documentation/ — review records
+- README.md, CHANGELOG.md, LICENSE
 
-## Professional Contact
+## Copyright
+
+**Copyright (c) 2026 jassim20. All rights reserved.** Original materials are published for portfolio and reference purposes. See [LICENSE](LICENSE) for usage terms and exceptions.
+
+## Contact
 
 [GitHub portfolio](https://github.com/jassim20) · [LinkedIn](https://www.linkedin.com/in/jassim-auda-7b9279207/)
