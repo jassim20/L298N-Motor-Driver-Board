@@ -2,7 +2,7 @@
 
 A motor driver board based on the L298N, designed in Altium Designer, fabricated, and functionally tested by the designer.
 
-**Project status:** Fabricated and functionally tested (designer-confirmed). Technical documentation is being prepared for publication.
+**Project status:** Fabricated and functionally tested (designer-confirmed). The native schematic is published; remaining technical documentation is being prepared.
 
 ## Project Overview
 
@@ -19,7 +19,7 @@ This project demonstrates the design and implementation of an L298N-based dual H
 
 | Milestone | Status |
 | --- | --- |
-| Schematic design | Completed; source file pending upload |
+| Schematic design | Completed; [native source uploaded](Hardware/Schematic/Sheet1.L298N.SchDoc) |
 | PCB layout | Completed; source file pending upload |
 | PCB fabrication | Completed, as reported by the designer |
 | Functional testing | Successful, as reported by the designer |
@@ -27,6 +27,10 @@ This project demonstrates the design and implementation of an L298N-based dual H
 | Manufacturing files | Pending review and publication |
 
 Detailed electrical specifications, test conditions, component values, and fabrication dimensions will be documented after reviewing the original design files. No quantitative performance or safety ratings are claimed at this stage.
+
+## Schematic Source
+
+[Sheet1.L298N.SchDoc](Hardware/Schematic/Sheet1.L298N.SchDoc) — original Altium Designer schematic, uploaded byte-for-byte without design modifications. See the [source inventory and review limitations](Hardware/Schematic/README.md).
 
 ## Planned Repository Structure
 
@@ -43,7 +47,7 @@ L298N-Motor-Driver-Board/
 └── LICENSE
 ```
 
-The directories above describe the intended organization; design files and previews will be added after review.
+The schematic source is now available; the remaining directories describe the intended organization. Other design files and previews will be added after review.
 
 ## Release Status
 
