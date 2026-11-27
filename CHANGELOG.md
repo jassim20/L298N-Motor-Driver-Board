@@ -1,5 +1,14 @@
 # Changelog
 
+## v1.1.0 — SENSE return correction (2026-11-27)
+
+- Connected L298N SENSE A (U2-1) and SENSE B (U2-15) to GND in the schematic and PCB netlist.
+- Updated native schematic and PCB files; verified their Git blob hashes against the local source.
+- Regenerated all nine Gerber layers and NC drill outputs; retained 55 plated holes across five tool sizes.
+- Published the Altium ECO log and DRC report (0 violations, 0 waived violations; run before the final save).
+- Updated manufacturing ZIPs and documentation. Original v1.0.0 design previews retained and labeled historical.
+- Physical testing of the updated revision and final-save DRC/ERC remain pending.
+
 ## v1.0.0 — Original hardware
 
 - Replaced expanded manufacturing directories with designer-supplied Gerber and NC Drill ZIP archives; refreshed the combined archive and download links.

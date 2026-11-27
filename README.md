@@ -2,7 +2,7 @@
 
 A dual H-bridge motor driver board designed in Altium Designer, fabricated and functionally tested by the designer.
 
-**Status:** Original hardware revision (v1.0.0); native hardware source and manufacturing archives published. Physical fabrication and functional testing are designer-confirmed.
+**Status:** v1.1.0 — revised hardware source and updated fabrication archives. Original revision v1.0.0 was fabricated and functionally tested, as reported by the designer; revised hardware has not yet been independently tested.
 
 ![L298N motor driver board — Altium 3D preview](Images/03-pcb-3d.png)
 
@@ -10,7 +10,7 @@ A dual H-bridge motor driver board designed in Altium Designer, fabricated and f
 
 [ Schematic ](Images/01-schematic.png) · [ 2D PCB layout ](Images/02-pcb-2d.png) · [ 3D PCB preview ](Images/03-pcb-3d.png)
 
-Previews were captured from the original Altium design; they are not photographs of the fabricated hardware.
+Previews show the original v1.0.0 Altium design for reference, not the revised layout or photographs of the fabricated hardware.
 
 ## Hardware Overview
 
@@ -35,7 +35,7 @@ The component inventory and net labels were extracted from the native schematic.
 - [Output job](Hardware/Job1.OutJob)
 - [Schematic inventory and review scope](Hardware/Schematic/README.md)
 
-The schematic and PCB files are byte-for-byte copies of the original sources. The published project and output-job configuration use relative paths; unavailable external library references and stale generated-document references were removed from the project copy. External component libraries are not included. The portable project has not been independently opened or compiled after the path adjustments.
+The schematic and PCB files are byte-for-byte copies of the revised Altium sources, verified by Git blob hash. The previously published portable project configuration and output job are retained. The published project and output-job configuration use relative paths; unavailable external library references and stale generated-document references were removed from the project copy. External component libraries are not included. The portable project has not been independently opened or compiled after the path adjustments.
 
 ## Manufacturing
 
@@ -44,15 +44,20 @@ The schematic and PCB files are byte-for-byte copies of the original sources. Th
 - [Fabrication ZIP](Manufacturing/L298N-Fabrication.zip)
 - [Manufacturing notes](Manufacturing/README.md)
 
-The manufacturing archives were supplied by the designer for v1.0.0. Their equivalence to the earlier exports and PCB has not been independently established. Their drill report lists 55 plated holes. Review the files in a fabrication viewer and confirm the board outline, drill format and manufacturer DFM requirements before ordering.
+The v1.1.0 Gerber and NC Drill archives were generated on 27 November 2026 at 5:25 PM and match the files supplied by the designer (SHA-256). All nine expected Gerber layers and 55 plated holes are present. Review the exports in a fabrication viewer before ordering; independent DFM approval is not included.
 
 ## Verification
 
-- PCB fabricated and functionally tested, as reported by the designer.
+- Original v1.0.0 PCB fabricated and functionally tested, as reported by the designer; v1.1.0 hardware testing is pending.
 - Native schematic and PCB source identity checked using Git blob hashes.
-- [Historical DRC report](Documentation/Historical-DRC.txt) reports zero violations and zero waived violations. Its date field is 1/3/2026, predating the current PCB file. A fresh DRC and a complete schematic/ERC review of the current revision are not included.
-- Visual schematic review: L298N SENSE A (pin 1) and SENSE B (pin 15) appear unconnected. Confirm their connection to ground or the appropriate current-sense return in both the physical board and the PCB before further fabrication. This observation is not a completed ERC or a determination of the tested hardware's wiring.
+- [v1.1.0 DRC report](Documentation/DRC-v1.1.0.txt): 0 violations and 0 waived violations at 5:07 PM on 27 November 2026, after the SENSE net update but before the final save and exports. A repeat DRC on the final saved PCB and a full ERC are not documented.
+- SENSE A (U2 pin 1) and SENSE B (U2 pin 15) now connect to GND in the revised schematic; [Altium ECO log](Documentation/ECO-v1.1.0.txt) confirms both pins were added to the PCB GND net.
 - Detailed test results, procurement BOM and independent electrical ratings are not included.
+
+## Versions
+
+- [v1.0.0 — original hardware](https://github.com/jassim20/L298N-Motor-Driver-Board/tree/release/v1.0.0)
+- v1.1.0 — grounded SENSE A/B and regenerated manufacturing outputs (current revision).
 
 ## Repository Structure
 
